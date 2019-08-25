@@ -10,6 +10,16 @@
 <ul>
   <li>Click <a href="https://www.microsoft.com/en-us/software-download/windows10">here</a> to download tool to create Windows 10 installation media ISO.</li>  
   <li>Click <a href="https://rufus.ie">here</a> to download portable version of Rufus to create USB installation media from Windows ISO.</li>
+  <li>Create new folder "Toolkit" on USB installation media.</li>
+  <li>Create file getPatchMyPC.ps1 PowerShell script to download PatchMyPC.
+<pre>
+$client = new-object System.Net.WebClient
+$source = "https://patchmypc.com/freeupdater/PatchMyPC.exe"
+$target = "C:\Users\root\Desktop\PatchMyPC1.exe"
+$client.DownloadFile($source,$target)
+</pre>
+</li>
+  <li>Install Windows 10</li>
 </ul>
 
 </body>
